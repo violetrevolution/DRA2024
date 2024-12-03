@@ -28,4 +28,4 @@ As competition in the tech space for generative AI increases, so too does the de
 [7] Z. Zangwei et al., “Open-Sora: Democratizing Efficient Video Production for All,” March 2024. Available: https://github.com/hpcaitech/Open-Sora
 
 ### Acknowledgements
-I'd like to thank Dr. Yuzhuo Li for setting up this project and sharing knowledge of the technical aspects and poster design - check out the [GitHub page](https://github.com/chennnnnyize/LLM_Impact_Energy_Systems) for his research. The research was supported and arranged by Dr. Ryan Li of the ELITE Grid Research Lab. This project would have been impossible without the Open-Sora developers, so big thanks to them. 
+I'd like to thank Dr. Yuzhuo Li for setting up this project and sharing knowledge of the technical aspects and poster design - check out the [GitHub page](https://github.com/chennnnnyize/LLM_Impact_Energy_Systems) for his research. The project was supported and arranged by Dr. Ryan Li of the ELITE Grid Research Lab (provided lab space, oscilloscope, computer). This also would have been impossible without the [Open-Sora](https://github.com/hpcaitech/Open-Sora) developers.
