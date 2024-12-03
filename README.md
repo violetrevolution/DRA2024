@@ -4,6 +4,10 @@ I completed this project in the 2024 Fall semester. The goal was to conduct a ba
 ### Abstract
 As competition in the tech space for generative AI increases, so too does the demand for power. Very large GPU clusters are required to support both training and use of generative AI, and the clusters only get larger and more power-hungry as the quantity of training and use increases. The power consumption patterns can be unpredictable, which in tandem with fast ramping and high consumption means that AI clusters present a unique challenge to the grid. We expect video generation models to have similar problems. This project was conducted to investigate the power consumption patterns of video generation AI models and gain insight into how large-scale systems function under similar conditions. Using an oscilloscope and probes, we measured the total power draw of a computer running Open-Sora from prompt input to video output. We were able to find a trend for the power consumption of different video lengths, and on a smaller scale noted patterns and chaotic behaviour of power consumption. Video generation AI is important to investigate as it has a significantly larger energy draw and has been experiencing increased use in corporate spaces. The information collected during this project can help give AI researchers and power engineers alike insight into AI algorithms, allowing for better optimisation, grid integration, and management of AI. 
 
+### Video Samples
+
+![gif](SORA_Long1_000.gif) ![gif](SORA_Custom3_001.gif)
+
 ### Poster
 
 ![image](Poster.jpg)
