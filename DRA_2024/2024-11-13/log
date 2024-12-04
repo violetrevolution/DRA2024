@@ -1,0 +1,595 @@
+-------------------------------
+Prompt0 - 2
+Prompt1 - 10
+Prompt2 - 6
+Prompt11 - 5
+
+Prompt Total - 23
+-------------------------------
+Long1 - 2
+Long7 - 5
+
+Long Total - 7
+-------------------------------
+Custom1 - 2
+Custom2 - 1
+Custom3 - 2
+Custom4 - 2
+Custom5 - 2
+
+Custom Total - 9
+
+
+Grand Total - 39
+-------------------------------
+11:58:27
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 120 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history of the universe as he sits at a cafe in Paris, his eyes focus on people offscreen as they walk as he sits mostly motionless, he is dressed in a wool coat suit coat with a button-down shirt , he wears a brown beret and glasses and has a very professorial appearance, and the end he offers a subtle closed-mouth smile as if he found the answer to the mystery of life, the lighting is very cinematic with the golden light and the Parisian streets and city in the background, depth of field, cinematic 35mm film."
+[2024-11-13 18:53:08] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['An extreme close-up of an gray-haired man with a beard in his '
+            '60s, he is deep in thought pondering the history of the universe '
+            'as he sits at a cafe in Paris, his eyes focus on people offscreen '
+            'as they walk as he sits mostly motionless, he is dressed in a '
+            'wool coat suit coat with a button-down shirt , he wears a brown '
+            'beret and glasses and has a very professorial appearance, and the '
+            'end he offers a subtle closed-mouth smile as if he found the '
+            'answer to the mystery of life, the lighting is very cinematic '
+            'with the golden light and the Parisian streets and city in the '
+            'background, depth of field, cinematic 35mm film.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 18:53:08] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [03:18<00:00, 99.27s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:39<00:00, 39.58s/it]
+[2024-11-13 18:58:27] Inference finished.
+[2024-11-13 18:58:27] Saved 1 samples to ./samples/samples/
+
+
+
+12:03:07
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py   --num-frames 120 --resolution 240p --aspect-ratio 1:1   --prompt "An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history of the universe as he sits at a cafe in Paris, his eyes focus on people offscreen as they walk as he sits mostly motionless, he is dressed in a wool coat suit coat with a button-down shirt , he wears a brown beret and glasses and has a very professorial appearance, and the end he offers a subtle closed-mouth smile as if he found the answer to the mystery of life, the lighting is very cinematic with the golden light and the Parisian streets and city in the background, depth of field, cinematic 35mm film."
+[2024-11-13 19:02:10] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['An extreme close-up of an gray-haired man with a beard in his '
+            '60s, he is deep in thought pondering the history of the universe '
+            'as he sits at a cafe in Paris, his eyes focus on people offscreen '
+            'as they walk as he sits mostly motionless, he is dressed in a '
+            'wool coat suit coat with a button-down shirt , he wears a brown '
+            'beret and glasses and has a very professorial appearance, and the '
+            'end he offers a subtle closed-mouth smile as if he found the '
+            'answer to the mystery of life, the lighting is very cinematic '
+            'with the golden light and the Parisian streets and city in the '
+            'background, depth of field, cinematic 35mm film.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:02:10] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.26s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.89s/it]
+[2024-11-13 19:03:07] Inference finished.
+[2024-11-13 19:03:07] Saved 1 samples to ./samples/samples/
+
+
+
+12:08:43
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py   --num-frames 120 --resolution 240p --aspect-ratio 1:1   --prompt "An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history of the universe as he sits at a cafe in Paris, his eyes focus on people offscreen as they walk as he sits mostly motionless, he is dressed in a wool coat suit coat with a button-down shirt , he wears a brown beret and glasses and has a very professorial appearance, and the end he offers a subtle closed-mouth smile as if he found the answer to the mystery of life, the lighting is very cinematic with the golden light and the Parisian streets and city in the background, depth of field, cinematic 35mm film."
+[2024-11-13 19:07:47] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['An extreme close-up of an gray-haired man with a beard in his '
+            '60s, he is deep in thought pondering the history of the universe '
+            'as he sits at a cafe in Paris, his eyes focus on people offscreen '
+            'as they walk as he sits mostly motionless, he is dressed in a '
+            'wool coat suit coat with a button-down shirt , he wears a brown '
+            'beret and glasses and has a very professorial appearance, and the '
+            'end he offers a subtle closed-mouth smile as if he found the '
+            'answer to the mystery of life, the lighting is very cinematic '
+            'with the golden light and the Parisian streets and city in the '
+            'background, depth of field, cinematic 35mm film.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:07:47] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.28s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:35<00:00, 35.04s/it]
+[2024-11-13 19:08:43] Inference finished.
+[2024-11-13 19:08:43] Saved 1 samples to ./samples/samples/
+
+
+
+
+12:17:54
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 120 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Girl wearing a yellow sweater, jeans, and running shoes carries her grandmother up a mountain path. The girl is wearing a thin red ribbon in her hair as a ponytail. Her little sister is hiking in front of her. Her little sister is wearing the same as her, but with a red sweater. The sun is shining brightly through the trees, forming dancing shadows of branches on the path. They are being viewed from the side, the camera remains in it's place as the group walks up a path through the frame. The landscape shines with morning dew."
+[2024-11-13 19:16:58] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Girl wearing a yellow sweater, jeans, and running shoes carries '
+            'her grandmother up a mountain path. The girl is wearing a thin '
+            'red ribbon in her hair as a ponytail. Her little sister is hiking '
+            'in front of her. Her little sister is wearing the same as her, '
+            'but with a red sweater. The sun is shining brightly through the '
+            'trees, forming dancing shadows of branches on the path. They are '
+            "being viewed from the side, the camera remains in it's place as "
+            'the group walks up a path through the frame. The landscape shines '
+            'with morning dew.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:16:58] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.27s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.92s/it]
+[2024-11-13 19:17:54] Inference finished.
+[2024-11-13 19:17:54] Saved 1 samples to ./samples/samples/
+
+
+
+
+
+12:22:16
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py   --num-frames 120 --resolution 240p --aspect-ratio 1:1   --prompt "Girl wearing a yellow sweater, jeans, and running shoes carries her grandmother up a mountain path. The girl is wearing a thin red ribbon in her hair as a ponytail. Her little sister is hiking in front of her. Her little sister is wearing the same as her, but with a red sweater. The sun is shining brightly through the trees, forming dancing shadows of branches on the path. They are being viewed from the side, the camera remains in it's place as the group walks up a path through the frame. The landscape shines with morning dew."
+[2024-11-13 19:21:21] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Girl wearing a yellow sweater, jeans, and running shoes carries '
+            'her grandmother up a mountain path. The girl is wearing a thin '
+            'red ribbon in her hair as a ponytail. Her little sister is hiking '
+            'in front of her. Her little sister is wearing the same as her, '
+            'but with a red sweater. The sun is shining brightly through the '
+            'trees, forming dancing shadows of branches on the path. They are '
+            "being viewed from the side, the camera remains in it's place as "
+            'the group walks up a path through the frame. The landscape shines '
+            'with morning dew.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:21:21] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.30s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.91s/it]
+[2024-11-13 19:22:16] Inference finished.
+[2024-11-13 19:22:16] Saved 1 samples to ./samples/samples/
+
+
+
+
+
+
+12:26:06
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 120 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Man carrying a large boot whilst he wades through a swamp."
+[2024-11-13 19:25:11] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Man carrying a large boot whilst he wades through a swamp.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:25:11] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.33s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.80s/it]
+[2024-11-13 19:26:06] Inference finished.
+[2024-11-13 19:26:06] Saved 1 samples to ./samples/samples/
+
+
+
+
+
+12:28:45
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py   --num-frames 120 --resolution 240p --aspect-ratio 1:1   --prompt "Man carrying a large boot whilst he wades through a swamp."
+[2024-11-13 19:27:50] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Man carrying a large boot whilst he wades through a swamp.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:27:50] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.32s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.86s/it]
+[2024-11-13 19:28:45] Inference finished.
+[2024-11-13 19:28:45] Saved 1 samples to ./samples/samples/
+
+
+
+
+12:31:47
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 120 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Woman throwing a small coin into a fountain."
+[2024-11-13 19:30:51] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Woman throwing a small coin into a fountain.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:30:51] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.31s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.78s/it]
+[2024-11-13 19:31:47] Inference finished.
+[2024-11-13 19:31:47] Saved 1 samples to ./samples/samples/
+
+
+
+
+
+12:35:41
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py   --num-frames 120 --resolution 240p --aspect-ratio 1:1   --prompt "Woman throwing a small coin into a fountain."
+[2024-11-13 19:34:45] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Woman throwing a small coin into a fountain.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:34:45] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.34s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.70s/it]
+[2024-11-13 19:35:41] Inference finished.
+[2024-11-13 19:35:41] Saved 1 samples to ./samples/samples/
+
+
+
+
+12:46:53
+
+(pytorch) root@6bda9faff31e:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 120 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Wide shot from behind of a woman dressed in clothing from the early 1900s, wearing a blue top and white dress, with blonde hair tied in a braided bun at the back with red ribbons, and she has mechanical metal hands. She is typing on a typewriter with a lantern next to her as a warm source of light which fills the room. The room has an early 1900s theme, and the chair and desk that the woman sits on are made of wood."
+[2024-11-13 19:45:57] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Wide shot from behind of a woman dressed in clothing from the '
+            'early 1900s, wearing a blue top and white dress, with blonde hair '
+            'tied in a braided bun at the back with red ribbons, and she has '
+            'mechanical metal hands. She is typing on a typewriter with a '
+            'lantern next to her as a warm source of light which fills the '
+            'room. The room has an early 1900s theme, and the chair and desk '
+            'that the woman sits on are made of wood.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-13 19:45:57] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.31s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.83s/it]
+[2024-11-13 19:46:53] Inference finished.
+[2024-11-13 19:46:53] Saved 1 samples to ./samples/samples/
+
+
+

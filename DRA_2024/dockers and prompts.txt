@@ -1,0 +1,54 @@
+docker 1:
+	docker run -ti --gpus all -v .:/workspace/Open-Sora opensora_li:v1.1
+	
+	python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+  --num-frames 120 --resolution 240p --aspect-ratio 1:1 \
+  --prompt "[Prompt]"
+  
+docker 2: 
+	nvtop
+	
+docker 3:
+	docker ps
+	
+	docker cp <CONTAINER ID>:/workspace/Open-Sora/samples/samples /media/elite/AI-data/open_sora_data/<folder name>
+	
+	docker cp 6bda9faff31e:/workspace/Open-Sora/samples/samples/sample_0000.mp4	/media/elite/AI-data/open_sora_data/2024-11-13
+
+Prompt:
+1	A fat rabbit wearing a purple robe walking through a fantasy landscape
+2	Waves crashing against a lone lighthouse, ominous lighting
+3	A mystical forest showcasing the adventures of travellers who enter
+4	A blue-haired mage singing
+5	A surreal landscape with floating islands and waterfalls in the sky craft
+6	A blue bird standing in water
+7	A young man walks alone by the seaside
+8	Pink rose on a glass surface with droplets, close-up
+9	Drove viewpoint, a subway train coming out of a tunnel
+10	Space with all planets green and pink color with background of bright white stars
+11	A city floating in an astral space, with stars and nebulae
+12	Sunrise on top of a high-rise building
+13	Pink and cyan powder explosions
+14	Deers in the woods gaze into the camera under the sunlight
+15	In a flash of lightning, a wizard appeared from thin air, his long robes billowing in the wind
+16	A futuristic cyberpunk cityscape at night with towering neon-lit skyscrapers
+17	A scene where the trees, flowers, and animals come together to create a symphony of nature
+18	A ghostly ship sailing through the clouds, navigating through a sea under a moonlit sky
+19	A sunset with beautiful beach
+20	A young man walking alone in the forest
+
+Long:
+1	A stylish woman walks down a Tokyo street filled with warm glowing neon and animated city signage. She wears a black leather jacket, a long red dress, and black boots, and carries a black purse. She wears sunglasses and red lipstick. She walks confidently and casually. The street is damp and reflective, creating a mirror effect of the colorful lights. Many pedestrians walk about.
+2	Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field.
+3	A movie trailer featuring the adventures of the 30 year old space man wearing a red wool knitted motorcycle helmet, blue sky, salt desert, cinematic style, shot on 35mm film, vivid colors.
+4	Drone view of waves crashing against the rugged cliffs along Big Sur’s garay point beach. The crashing blue waters create white-tipped waves, while the golden light of the setting sun illuminates the rocky shore. A small island with a lighthouse sits in the distance, and green shrubbery covers the cliff’s edge. The steep drop from the road down to the beach is a dramatic feat, with the cliff’s edges jutting out over the sea. This is a view that captures the raw beauty of the coast and the rugged landscape of the Pacific Coast Highway.
+5	Animated scene features a close-up of a short fluffy monster kneeling beside a melting red candle. The art style is 3D and realistic, with a focus on lighting and texture. The mood of the painting is one of wonder and curiosity, as the monster gazes at the flame with wide eyes and open mouth. Its pose and expression convey a sense of innocence and playfulness, as if it is exploring the world around it for the first time. The use of warm colors and dramatic lighting further enhances the cozy atmosphere of the image.
+6	This close-up shot of a Victoria crowned pigeon showcases its striking blue plumage and red chest. Its crest is made of delicate, lacy feathers, while its eye is a striking red color. The bird’s head is tilted slightly to the side, giving the impression of it looking regal and majestic. The background is blurred, drawing attention to the bird’s striking appearance.
+7	An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history of the universe as he sits at a cafe in Paris, his eyes focus on people offscreen as they walk as he sits mostly motionless, he is dressed in a wool coat suit coat with a button-down shirt , he wears a brown beret and glasses and has a very professorial appearance, and the end he offers a subtle closed-mouth smile as if he found the answer to the mystery of life, the lighting is very cinematic with the golden light and the Parisian streets and city in the background, depth of field, cinematic 35mm film.
+
+Custom:
+1	Wide shot from behind of a woman dressed in clothing from the early 1900s, wearing a blue top and white dress, with blonde hair tied in a braided bun at the back with red ribbons, and she has mechanical metal hands. She is typing on a typewriter with a lantern next to her as a warm source of light which fills the room. The room has an early 1900s theme, and the chair and desk that the woman sits on are made of wood.
+2	Every pixel in every frame has a unique colour with no repeating colours in a frame. Every frame contains a unique combination of pixels with no repeating frames. The pixels are chosen completely randomly and do not have any sort of pattern or design. 
+3	Man carrying a large boot whilst he wades through a swamp.
+4	Girl wearing a yellow sweater, jeans, and running shoes carries her grandmother up a mountain path. The girl is wearing a thin red ribbon in her hair as a ponytail. Her little sister is hiking in front of her. Her little sister is wearing the same as her, but with a red sweater. The sun is shining brightly through the trees, forming dancing shadows of branches on the path. They are being viewed from the side, the camera remains in it's place as the group walks up a path through the frame. The landscape shines with morning dew.
+5	Woman throwing a small coin into a fountain.

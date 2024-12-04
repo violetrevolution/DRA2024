@@ -1,0 +1,568 @@
+12:58:29
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 120 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 19:57:34] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 19:57:34] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.06s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.90s/it]
+[2024-11-29 19:58:29] Inference finished.
+[2024-11-29 19:58:29] Saved 1 samples to ./samples/samples/
+
+
+1:01:40
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py   --num-frames 120 --resolution 240p --aspect-ratio 1:1   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:00:45] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '120',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:00:45] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.06s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:34<00:00, 34.79s/it]
+[2024-11-29 20:01:40] Inference finished.
+[2024-11-29 20:01:40] Saved 1 samples to ./samples/samples/
+
+
+1:04:35
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 108 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:03:43] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '108',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:03:43] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.05s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:31<00:00, 31.26s/it]
+[2024-11-29 20:04:35] Inference finished.
+[2024-11-29 20:04:35] Saved 1 samples to ./samples/samples/
+
+
+01:07:24
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py   --num-frames 108 --resolution 240p --aspect-ratio 1:1   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:06:32] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '108',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:06:32] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.06s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:31<00:00, 31.30s/it]
+[2024-11-29 20:07:24] Inference finished.
+[2024-11-29 20:07:24] Saved 1 samples to ./samples/samples/
+
+
+1:09:51
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 96 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:09:03] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '96',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:09:03] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.06s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:27<00:00, 27.56s/it]
+[2024-11-29 20:09:51] Inference finished.
+[2024-11-29 20:09:51] Saved 1 samples to ./samples/samples/
+
+
+1:12:47
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 84 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:12:04] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '84',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:12:04] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.07s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:22<00:00, 22.96s/it]
+[2024-11-29 20:12:47] Inference finished.
+[2024-11-29 20:12:47] Saved 1 samples to ./samples/samples/
+
+
+1:15:23
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 72 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:14:42] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '72',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:14:42] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.06s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:19<00:00, 19.68s/it]
+[2024-11-29 20:15:23] Inference finished.
+[2024-11-29 20:15:23] Saved 1 samples to ./samples/samples/
+
+
+1:18:08
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 60 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:17:31] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '60',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:17:31] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.05s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:16<00:00, 16.29s/it]
+[2024-11-29 20:18:08] Inference finished.
+[2024-11-29 20:18:08] Saved 1 samples to ./samples/samples/
+
+
+1:20:39
+
+(pytorch) root@6061eb6c47d6:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 48 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 20:20:06] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '48',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 20:20:06] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                 | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.03s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:12<00:00, 12.65s/it]
+[2024-11-29 20:20:39] Inference finished.
+[2024-11-29 20:20:39] Saved 1 samples to ./samples/samples/
+
+
+04:02:06
+
+(pytorch) root@096ad7f37a09:/workspace/Open-Sora# python scripts/inference.py configs/opensora-v1-2/inference/sample.py \
+>   --num-frames 36 --resolution 240p --aspect-ratio 1:1 \
+>   --prompt "Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field."
+[2024-11-29 23:01:36] Inference configuration:
+ {'aes': 6.5,
+ 'align': 5,
+ 'aspect_ratio': '1:1',
+ 'batch_size': 1,
+ 'condition_frame_length': 5,
+ 'config': 'configs/opensora-v1-2/inference/sample.py',
+ 'dtype': 'bf16',
+ 'flow': None,
+ 'fps': 24,
+ 'frame_interval': 1,
+ 'model': {'enable_flash_attn': True,
+           'enable_layernorm_kernel': True,
+           'from_pretrained': 'hpcai-tech/OpenSora-STDiT-v3',
+           'qk_norm': True,
+           'type': 'STDiT3-XL/2'},
+ 'multi_resolution': 'STDiT2',
+ 'num_frames': '36',
+ 'prompt': ['Several giant wooly mammoths approach treading through a snowy '
+            'meadow, their long wooly fur lightly blows in the wind as they '
+            'walk, snow covered trees and dramatic snow capped mountains in '
+            'the distance, mid afternoon light with wispy clouds and a sun '
+            'high in the distance creates a warm glow, the low camera view is '
+            'stunning capturing the large furry mammal with beautiful '
+            'photography, depth of field.'],
+ 'prompt_as_path': False,
+ 'resolution': '240p',
+ 'save_dir': './samples/samples/',
+ 'save_fps': 24,
+ 'scheduler': {'cfg_scale': 7.0,
+               'num_sampling_steps': 30,
+               'type': 'rflow',
+               'use_timestep_transform': True},
+ 'seed': 42,
+ 'text_encoder': {'from_pretrained': 'DeepFloyd/t5-v1_1-xxl',
+                  'model_max_length': 300,
+                  'type': 't5'},
+ 'vae': {'from_pretrained': 'hpcai-tech/OpenSora-VAE-v1.2',
+         'micro_batch_size': 4,
+         'micro_frame_size': 17,
+         'type': 'OpenSoraVAE_V1_2'}}
+[2024-11-29 23:01:36] Building models...
+/opt/conda/envs/pytorch/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                                                                                       | 0/2 [00:00<?, ?it/s]/opt/conda/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████| 2/2 [00:16<00:00,  8.06s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:09<00:00,  9.90s/it]
+[2024-11-29 23:02:06] Inference finished.
+[2024-11-29 23:02:06] Saved 1 samples to ./samples/samples/
+
+
+
