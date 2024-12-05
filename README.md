@@ -29,3 +29,14 @@ As competition in the tech space for generative AI increases, so too does the de
 
 ### Acknowledgements
 I'd like to thank Dr. Yuzhuo Li for setting up this project and sharing knowledge of the technical aspects and poster design - check out the [GitHub page](https://github.com/chennnnnyize/LLM_Impact_Energy_Systems) for his research. The project was supported and arranged by Dr. Ryan Li of the ELITE Grid Research Lab (provided lab space, oscilloscope, computer). This also would have been impossible without the [Open-Sora](https://github.com/hpcaitech/Open-Sora) developers.
+
+### To cite this work/data
+@misc{villeneuve2024generative,
+  author = {Violet Villeneuve and Yuzhuo Li and Ryan Li and Pasan Gunawardena},
+  title = {Generative AI Power Consumption},
+  howpublished = {Poster presented at the Department of Electrical and Computer Engineering, University of Alberta, Edmonton, Canada},
+  year = {2024},
+  note = {Available at \url{https://github.com/violetrevolution/DRA2024}},
+  organization = {University of Alberta, ELITEGrid Research Lab},
+  month = {December}
+}
